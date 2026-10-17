@@ -40,12 +40,12 @@ jobs:
     steps:
       - name: Resolve the tools revision
         id: tools
-        uses: jiayx/d2r-mobile-build/.github/actions/resolve-tools@main
+        uses: njzydark/d2r-mobile-build/.github/actions/resolve-tools@main
         with:
           workflow: prepare-ios.yml
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          repository: jiayx/d2r-mobile-build
+          repository: njzydark/d2r-mobile-build
           ref: ${{ steps.tools.outputs.tools_commit }}
           persist-credentials: false
       - name: Select the latest release or requested source
