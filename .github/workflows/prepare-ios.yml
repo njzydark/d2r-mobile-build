@@ -1,6 +1,7 @@
 name: Prepare iOS input
 on:
   workflow_dispatch:
+  workflow_call:
     inputs:
       source_repository:
         type: string
