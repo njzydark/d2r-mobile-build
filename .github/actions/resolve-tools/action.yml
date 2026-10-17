@@ -22,7 +22,7 @@ runs:
         def api(path):
             return json.loads(subprocess.check_output(['gh', 'api', path], text=True))
         repo = os.environ['GITHUB_REPOSITORY']
-        path = 'jiayx/d2r-mobile-build/.github/workflows/' + os.environ['BUILD_WORKFLOW']
+        path = 'njzydark/d2r-mobile-build/.github/workflows/' + os.environ['BUILD_WORKFLOW']
         for attempt in range(3):
             run = api('repos/' + repo + '/actions/runs/' + os.environ['GITHUB_RUN_ID'])
             refs = [item['sha'] for item in run.get('referenced_workflows', [])
